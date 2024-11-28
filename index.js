@@ -18,6 +18,10 @@ app.use(cors());
 app.use(express.json());
 
 connectDB();
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+  });
+  
 app.use('/uploads', express.static('uploads')); 
 app.use("/api/user",users);
 app.use('/api/projects',projects);
