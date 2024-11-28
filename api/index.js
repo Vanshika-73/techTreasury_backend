@@ -3,13 +3,13 @@ import { fileURLToPath } from 'url';
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import connectDB from '../../config/connectDb.js';
-import users from '../../routes/UserRoute.js';
-import carts from '../../routes/CartRoute.js';
-import orders from '../../routes/OrderRoute.js';
-import projects from '../../routes/ProjectRoute.js';
-import errorHandler from '../../middlewares/errorHandler.js';
-import notFound from '../../middlewares/notFound.js';
+import connectDB from '../config/connectDb.js';
+import users from '../routes/UserRoute.js';
+import carts from '../routes/CartRoute.js';
+import orders from '../routes/OrderRoute.js';
+import projects from '../routes/ProjectRoute.js';
+import errorHandler from '../middlewares/errorHandler.js';
+import notFound from '../middlewares/notFound.js';
 
 dotenv.config();
 
