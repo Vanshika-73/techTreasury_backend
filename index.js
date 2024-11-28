@@ -1,3 +1,5 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
 import express from "express";
 import connectDB from "./config/connectDb.js";
 import cors from "cors";
@@ -21,8 +23,13 @@ connectDB();
 app.get('/', (req, res) => {
     res.send('Hello, World!');
   });
-  
-app.use('/uploads', express.static('uploads')); 
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// app.use('/uploads', express.static('uploads')); 
 app.use("/api/user",users);
 app.use('/api/projects',projects);
 app.use("/api/cart",carts)
