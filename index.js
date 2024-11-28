@@ -33,7 +33,7 @@ app.use("/api/user",users);
 app.use('/api/projects',projects);
 app.use("/api/cart",carts)
 app.use("/api/order",orders)
-app.use(errorHandler);
 app.use(notFound);
+app.use(errorHandler);
 const port =process.env.PORT || 3000;
 app.listen(port,()=>console.log(`server is running on port ${port}`));
