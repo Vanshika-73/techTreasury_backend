@@ -7,7 +7,11 @@ import users from "./routes/UserRoute.js";
 import carts from './routes/CartRoute.js';
 import orders from './routes/OrderRoute.js';
 import projects from './routes/ProjectRoute.js'
-import { isBuyer } from "./middlewares/authentication.js";
+import dotenv from "dotenv";
+
+
+dotenv.config();
+
 const app= express();
 
 app.use(cors());
