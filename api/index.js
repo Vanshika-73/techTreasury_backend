@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     res.send('Hello, World!');
 });
 
-app.use('/uploads', express.static(path.join(__dirname, '../../uploads')));
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use('/api/user', users);
 app.use('/api/projects', projects);
 app.use('/api/cart', carts);
