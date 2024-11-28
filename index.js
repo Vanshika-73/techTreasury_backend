@@ -21,5 +21,5 @@ app.use("/api/cart",carts)
 app.use("/api/order",orders)
 app.use(errorHandler);
 app.use(notFound);
-const port =5555;
+const port =process.env.PORT || 3000;
 app.listen(port,()=>console.log(`server is running on port ${port}`));
